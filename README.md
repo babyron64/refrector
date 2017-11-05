@@ -1,1 +1,1 @@
-Refrector helps you enhance your thoughts. As soon as some idea occurs to you, write down it on this app, and you can remenber it later.
+Refrector helps you enhance your thoughts. Write down any idea on "refrector" as soon as it occurs to you, then you can resume thinking of it later - whenever you want to!
