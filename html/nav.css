@@ -1,0 +1,76 @@
+body {
+    background-color: #ddd;
+    margin: 0px;
+}
+nav {
+    background-color: #222;
+}
+nav::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+nav div {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    float: left;
+}
+nav div a {
+    display: block;
+    background-color: gray;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+nav div a:hover {
+    background-color: black;
+    color: white;
+}
+nav div:hover #more-menu {
+    display: block;
+}
+#more-menu {
+    display: none;  
+    position: absolute;
+    right: 0px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1;
+}
+#more-menu a {
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 10px;
+    list-style-type: none;
+}
+#more-menu a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.sidebar {
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+
+.main {
+    float: left;
+}
+
+footer {
+    background-color: gray;
+    color: white;
+    position: fixed;
+    display: block;
+    bottom: 0px;
+    width: 100%;
+    clear: both;
+}

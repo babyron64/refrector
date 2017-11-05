@@ -2,66 +2,14 @@
 <html>
 <head>
     <title>index</title>
-    <style>
-        body {
-            margin: 0px;
-        }
-        nav {
-            background-color: #222;
-        }
-        nav::after {
-            content: "";
-            clear: both;
-            display: block;
-        }
-        nav div {
-            border-style: solid;
-            border-width: 1px;
-            border-color: white;
-            float: left;
-        }
-        nav div a {
-            display: block;
-            background-color: gray;
-            padding: 5px;
-            text-decoration: none;
-            color: black;
-        }
-        nav div a:hover {
-            background-color: black;
-            color: white;
-        }
-        nav div:hover #more-menu {
-            display: block;
-        }
-        #more-menu {
-            display: none;  
-            position: absolute;
-            right: 0px;
-            border: none;
-            padding: 0px;
-            margin: 0px;
-            z-index: 1;
-        }
-        #more-menu a {
-            display: block;
-            border-width: 1px;
-            border-style: solid;
-            border-color: black;
-            padding: 10px;
-            list-style-type: none;
-        }
-        #more-menu a:hover {
-            background-color: white;
-            color: black;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="std-frame.css">
 </head>
 <body>
+<!-- navigator -->
 <header>
     <nav>
-        <div><a href="#">hello</a></div>
-        <div><a href="#">hello</a></div>
+        <div style="float: left"><a href="#">hello</a></div>
+        <div style="float: left"><a href="#">hello</a></div>
         <div style="float: right"><a href="#">account</a>
             <div id="more-menu">
                 <a href="#">sign in</a>
@@ -69,7 +17,34 @@
                 <a href="#">sign out</a>
             </div>
         </div>
+        <div id="search-input" style="float: right">
+            <form> 
+                <input id="search-input-field" type="text"></input>
+                <button id="search-input-btn" type="submit"><img id="search-input-icon" src=""></img></button>
+            </form>
+        </div>
     </nav>
 </header>
+
+<!-- sidebar -->
+<aside class="sidebar">
+    <div id="ant-info">
+        <a href="#"><img id="ant-icon" src=""></a>
+        <span style="margin: auto;text-align: center;">babyron</span>
+    </div>
+    <div id="theme">
+        h1〜h6タグのつかいかた
+    </div>
+</aside>
+
+<div class="main">
+    <div class="post last-post">
+        h1〜h6タグの美しくおしゃれなデザインサンプルをたくさん紹介します。どれも ... HTMLコード例. この記事で紹介するリスト例はどれも以下のコードを使っています。 HTML 美しい見出しの ..... 文章の下に小さく線をつけるデザインです
+    </div>
+</div>
+
+<footer style="overflow: hidden;">
+    <button class="footer-btn" style="float: right">Add</button>
+</footer>
 </body>
 </html>    

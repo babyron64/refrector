@@ -1,0 +1,139 @@
+body {
+    background-color: #ddd;
+    margin: 0px;
+}
+nav {
+    background-color: #222;
+    height: 30px;
+}
+nav::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+nav div {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+nav div a {
+    display: block;
+    background-color: gray;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+nav div a:hover {
+    background-color: black;
+    color: white;
+}
+nav div:hover #more-menu {
+    display: block;
+}
+#search-input {
+    border: none;
+    overflow: hidden;
+}
+#search-input form {
+    background-color: white;
+    border-radius: 6px;
+    margin: 5px 10px;
+    height: 20px;
+    overflow: hidden;
+}
+#search-input-field {
+    display: block;
+    margin: 0px;
+    border: none;
+    padding: 2px;
+    height: 20px;
+    float: left
+}
+#search-input-btn {
+    margin: auto;
+    border: none;
+    padding: 0px;
+    float: left
+}
+#search-input-icon {
+    width: 20px;
+    height: 20px;
+}
+#more-menu {
+    display: none;  
+    position: absolute;
+    right: 0px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1;
+}
+#more-menu a {
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 10px;
+    list-style-type: none;
+}
+#more-menu a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.sidebar {
+    background-color: #333;
+    color: white;
+    margin: 10px;
+    padding: 20px;
+}
+#ant-info {
+    width: 100px;
+    margin: auto;
+}
+#ant-icon {
+    background-color: gray;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+#theme {
+    background-color: gray;
+    border-radius: 10px;
+    min-height: 50px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    margin: 10px;
+    width: auto;
+    text-align: center;
+}
+
+.main {
+    padding: 20px;
+}
+.post {
+    background-color: gray;
+    margin: 10px auto;
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.post.last-post{
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: gray;
+    color: white;
+    position: fixed;
+    display: block;
+    bottom: 0px;
+    width: 100%;
+    clear: both;
+}
+.footer-btn {
+    padding: 10px;
+}
