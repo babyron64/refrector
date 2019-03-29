@@ -1,0 +1,49 @@
+version: 2
+jobs:
+  build:
+    docker:
+    - image: circleci/golang:1.12.0
+
+    working_directory: ~/project/refrector
+
+    environment:
+      GOPATH: ~/project/refrector
+
+    steps:
+      - checkout
+
+      - run:
+          name: set environment variables
+          command: |
+            echo 'export PATH=$GOPATH/bin:$PATH' >> $BASH_ENV 
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            # when lock file changes, use increasingly general patterns to restore cache
+            - goenv-packages-v1-{{ .Branch }}-{{ checksum "Gopkg.lock" }}
+            - goenv-packages-v1-{{ .Branch }}-
+            - goenv-packages-v1-
+
+      - run:
+          name: install dependencies
+          command: |
+            go get -u github.com/golang/dep/cmd/dep
+            dep ensure
+
+      - save_cache:
+          paths:
+            - ~/project/refrector/vendor
+            - ~/project/refrector/pkg
+          key: goenv-packages-v1-{{ .Branch }}-{{ checksum "Gopkg.lock" }}
+      
+      - run:
+          name: run tests
+          command: |
+            go test server/*
+
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+      - build
