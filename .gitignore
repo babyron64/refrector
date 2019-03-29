@@ -1,0 +1,6 @@
+/vendor
+/pkg
+/auth/secret/*
+.go-version
+
+!/auth/secret/.gitkeep
